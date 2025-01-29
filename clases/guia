@@ -1,0 +1,100 @@
+**Guía avanzada para la medición de resistividad con amplificador Lock-in**
+
+### **1. Objetivos del experimento:**
+- Determinar la resistividad de un material conductor mediante técnicas de medición de alta precisión.
+- Comprender el principio de funcionamiento de un amplificador Lock-in para detectar señales muy pequeñas.
+- Analizar el comportamiento resistivo y reactivo del sistema en función de la frecuencia.
+
+---
+
+### **2. Materiales necesarios:**
+- Amplificador Lock-in (como SR830)
+- Generador de funciones integrado o externo
+- Resistencia de referencia (~1kΩ)
+- Alambre conductor (por ejemplo, aluminio de 0.5 mm de diámetro y 30 cm de largo)
+- Cables coaxiales BNC
+- Multímetro de alta precisión
+- Pinzas tipo cocodrilo
+- Lija fina para retirar el esmalte del alambre
+- Soportes para fijar el alambre
+- Base de conexiones y protoboard
+
+---
+
+### **3. Armado del setup experimental:**
+#### **3.1 Preparación del alambre:**
+- Lija cuidadosamente los extremos del alambre conductor para eliminar cualquier recubrimiento aislante.
+- Asegúrate de que el alambre esté limpio y libre de deformaciones.
+
+#### **3.2 Configuración del circuito divisor resistivo:**
+- Conecta en serie el alambre y una resistencia de referencia de 1kΩ formando un divisor de tensión.
+- Fija ambos componentes sobre una base de conexiones para asegurar la estabilidad mecánica.
+
+#### **3.3 Conexiones del sistema:**
+- Conecta el terminal positivo del generador de funciones al nodo común entre la resistencia y el alambre.
+- Conecta el terminal negativo del generador a tierra.
+- Usa un cable BNC para llevar la señal desde el nodo de medición hacia la entrada del amplificador Lock-in.
+- Verifica que todas las conexiones sean firmes y correctas.
+
+#### **3.4 Configuración del generador de funciones:**
+- Tipo de señal: Senoidal
+- Amplitud: 1 Vpp (como máximo)
+- Frecuencia: Comienza en 1 kHz y ajusta según necesidades del experimento
+
+#### **3.5 Configuración del amplificador Lock-in:**
+- Filtro pasabajos: Actívalo con una frecuencia de corte adecuada (por ejemplo, 10 Hz)
+- Referencia de frecuencia: Configura la misma frecuencia que el generador de funciones
+- Sensibilidad: Ajusta la ganancia para obtener una lectura estable y clara
+
+---
+
+### **4. Procedimiento paso a paso:**
+
+#### **4.1 Calibración inicial:**
+1. Asegúrate de que el generador de funciones esté encendido y generando una señal estable.
+2. Verifica con un multímetro la tensión aplicada al divisor resistivo.
+3. Ajusta la ganancia del Lock-in para obtener una lectura en la cuadratura "X".
+
+#### **4.2 Medición de la resistencia del alambre:**
+1. Aplica la tensión del generador de funciones.
+2. Mide la caída de tensión en el alambre utilizando el Lock-in.
+3. Calcula la resistencia del alambre con la ecuación:
+   \[
+   R_c = R_0 \cdot \frac{V_c}{V_0 - V_c}
+   \]
+   Donde:
+   - \( R_0 \) es la resistencia de referencia (1kΩ).
+   - \( V_c \) es la caída de tensión medida en el alambre.
+   - \( V_0 \) es la tensión aplicada.
+
+#### **4.3 Mediciones segmentadas:**
+1. Usa pinzas cocodrilo para conectar el alambre en diferentes puntos intermedios.
+2. Realiza mediciones de tensión para distintas longitudes del alambre.
+3. Registra los valores obtenidos y calcula las resistencias correspondientes.
+
+#### **4.4 Eliminación del barniz:**
+- Si es necesario medir en posiciones intermedias, elimina el barniz del alambre con cuidado.
+
+#### **4.5 Análisis de impedancia:**
+1. Incrementa gradualmente la frecuencia del generador de funciones.
+2. Registra las lecturas en "X" y "Y" del Lock-in.
+3. Observa el comportamiento reactivo del sistema y analiza posibles componentes inductivas.
+
+#### **4.6 Experimento opcional:**
+- Forma un lazo con el alambre y mide la impedancia reactiva en función de la frecuencia.
+- Enrolla el alambre alrededor de un núcleo de ferrita y mide la inductancia.
+
+---
+
+### **5. Análisis de resultados:**
+- Grafica la resistencia en función de la longitud del alambre para verificar una relación lineal.
+- Analiza si hay offset debido a resistencias de contacto.
+- Evalúa la presencia de componentes inductivas mediante el análisis de las cuadraturas "X" y "Y".
+
+### **6. Consideraciones finales:**
+- Asegúrate de que las tierras de los cables estén correctamente conectadas.
+- Verifica siempre la continuidad de las conexiones antes de cada medición.
+- Repite cada medición al menos tres veces para asegurar la estabilidad de los datos.
+
+Con esta guía podrás llevar a cabo un experimento riguroso y detallado, utilizando el amplificador Lock-in para medir resistencias pequeñas y analizar los efectos relacionados con la impedancia del sistema.
+
